@@ -1,0 +1,172 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #E5E8E8; /* Light Grey Background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background: #4A90E2; /* Soft Blue */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 10px 0 0;
+}
+
+/* Main Section Styling */
+main {
+  padding: 20px;
+}
+
+/* Search Bar */
+#search-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#searchBar {
+  padding: 10px;
+  font-size: 1.1em;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  border: 2px solid #4A90E2; /* Soft Blue border */
+  background-color: #F9E79F; /* Soft Yellow */
+}
+
+/* Category Buttons */
+#categories {
+  text-align: center;
+}
+
+.category-button {
+  background-color: #2ECC71; /* Fresh Green */
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #27AE60; /* Darker Green */
+  transform: scale(1.05);
+}
+
+/* Eligibility Checker Form */
+#eligibility-checker {
+  background: #E6E6FA; /* Soft Lavender */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#eligibilityForm label {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#eligibilityForm input,
+#eligibilityForm select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #4A90E2;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#eligibilityForm button {
+  background-color: #F5A623; /* Soft Orange */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#eligibilityForm button:hover {
+  background-color: #F39C12; /* Darker Orange */
+}
+
+/* Exam Details Section */
+#exam-details {
+  margin-top: 20px;
+  background-color: #D5B88D; /* Warm Beige */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#exam-details h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+  background: #4A90E2; /* Soft Blue */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1em;
+}
+
+footer p {
+  margin: 0;
+}
+#eligibilityForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #4A90E2;
+  border-radius: 5px;
+  font-size: 1em;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  #searchBar {
+    width: 90%;
+  }
+
+  .category-button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  #eligibilityForm input,
+  #eligibilityForm select,
+  #eligibilityForm button {
+    font-size: 1em;
+  }
+  /* Styling for eligibility messages */
+#eligibilityResult p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+#eligibilityResult p[style*="color: green;"] {
+  font-weight: bold;
+}
+
+#eligibilityResult p[style*="color: red;"] {
+  font-style: italic;
+}
+}

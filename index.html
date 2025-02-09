@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GovExam Eligibility App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Government Exam Eligibility</h1>
+    <p>Your one-stop platform for government exam details and eligibility!</p>
+  </header>
+
+  <main>
+    <!-- Search Section -->
+    <section id="search-section">
+      <input type="text" id="searchBar" placeholder="Search for exams...">
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+      <h2>Exam Categories</h2>
+      <div class="category-list">
+        <button class="category-button" onclick="showExams('GATE')">GATE</button>
+        <button class="category-button" onclick="showExams('EAMCET')">EAMCET</button>
+        <button class="category-button" onclick="showExams('JEE Main')">JEE Main</button>
+        <button class="category-button" onclick="showExams('JEE Advanced')">JEE Advanced</button>
+        <button class="category-button" onclick="showExams('Banking')">Banking</button>
+        <button class="category-button" onclick="showExams('UPSC')">UPSC</button>
+        <button class="category-button" onclick="showExams('SSC')">SSC</button>
+        <button class="category-button" onclick="showExams('Defense')">Defense</button>
+        <button class="category-button" onclick="showExams('Railways')">Railways</button>
+        <button class="category-button" onclick="showExams('Teaching')">Teaching</button>
+        <button class="category-button" onclick="showExams('State PSC')">State PSC</button>
+        <button class="category-button" onclick="showExams('Public Sector Undertaking(PSU)')">Public Sector Undertaking(PSU)</button>
+        <button class="category-button" onclick="showExams('Other Popular Government Exams')">Other Popular Government Exams</button>
+        <button class="category-button" onclick="showExams('Administrative and Financial Services')">Administrative and Financial Services</button>
+        <button class="category-button" onclick="showExams('Health and Medical Services')">Health and Medical Services</button>
+        <button class="category-button" onclick="showExams('Research and Scientific Organizations')">Research and Scientific Organizations</button>
+        <button class="category-button" onclick="showExams('Foreign Services and Language-Based Exams')">Foreign Services and Language-Based Exams</button>
+        <button class="category-button" onclick="showExams('State-Level Recruitment Exams')">State-Level Recruitment Exams</button>
+        <button class="category-button" onclick="showExams('University and Institute-Based Recruitment')">University and Institute-Based Recruitment</button>
+        <button class="category-button" onclick="showExams('IT and Communication Sector')">IT and Communication Sector</button>
+        <button class="category-button" onclick="showExams('Tourism and Archaeology Sector')">Tourism and Archaeology Sector</button>
+        <button class="category-button" onclick="showExams('Special Category Exams')">Special Category Exams</button>
+        <button class="category-button" onclick="showExams('International Organization-Based Government Jobs')">International Organization-Based Government Jobs</button>
+        <button class="category-button" onclick="showExams('Miscellaneous Exams')">Miscellaneous Exams</button>
+        <button class="category-button" onclick="showExams('Legal and Judiciary Sector')">Legal and Judiciary Sector</button>
+        <button class="category-button" onclick="showExams('Finance and Taxation')">Finance and Taxation</button>
+        <button class="category-button" onclick="showExams('Ministry and Administrative Jobs')">Ministry and Administrative Jobs</button>
+        <button class="category-button" onclick="showExams('Energy and Power Sector')">Energy and Power Sector</button>
+        <button class="category-button" onclick="showExams('Transport and Logistics')">Transport and Logistics</button>
+        <button class="category-button" onclick="showExams('Environment and Forestry')">Environment and Forestry</button>
+        <button class="category-button" onclick="showExams('Education and Research')">Education and Research</button>
+        <button class="category-button" onclick="showExams('Regional and Local Government Exams')">Regional and Local Government Exams</button>
+        <button class="category-button" onclick="showExams('Media and Communication')">Media and Communication</button>
+        <button class="category-button" onclick="showExams('Cooperative Societies and Rural Development')">Cooperative Societies and Rural Development</button>
+        <button class="category-button" onclick="showExams('Space and Astronomy')">Space and Astronomy</button>
+        <button class="category-button" onclick="showExams('Other Exams')">Other Exams</button>    
+      </div>
+    </section>
+
+    <!-- Eligibility Checker Section -->
+    <section id="eligibility-checker">
+      <h2>Check Your Eligibility</h2>
+      <form id="eligibilityForm">
+        <!-- Add Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <!-- Add Exam Selection Field -->
+        <label for="exam">Select Exam:</label>
+        <select id="exam" required>
+          <option value="">Select an Exam</option>
+          <!-- Populate this dynamically using JavaScript -->
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required />
+
+        <label for="qualification">Highest Qualification:</label>
+        <select id="qualification" required>
+          <option value="">Select</option>
+          <option value="10th">10th Pass</option>
+          <option value="12th">12th Pass</option>
+          <option value="Graduate">Graduate</option>
+          <option value="PostGraduate">Post Graduate</option>
+          <option value="Engineering Graduate">Engineering Graduate</option>
+           <option value="MBBS">MBBS</option>
+  <option value="B.Ed">B.Ed</option>
+  <option value="Law">Law Graduate</option>
+  <option value="Diploma">Diploma in Engineering</option>
+  <option value="Agriculture">Agriculture Graduate</option>
+          <option value="10+2 with PCM/PCB">10+2 with PCM/PCB</option>
+          <option value="10+2 with PCM">10+2 with PCM</option>
+          <option value="Qualified JEE Main and 10+2 with PCM">Qualified JEE Main and 10+2 with PCM</option>
+           <option value="Engineering Graduate or Final-Year Student">Engineering Graduate or Final-Year Student</option>
+           <option value="Postgraduate in Economics/Statistics">Postgraduate in Economics/Statistics</option>
+           <option value="Graduate with Specialization">Graduate with Specialization</option>
+           <option value="Graduate/Postgraduate">Graduate/Postgraduate</option>
+   <option value="10th">10th Pass</option>
+          <option value="10th Pass with ITI">10th Pass with ITI",</option>
+          <option value="Graduate with B.Ed">Graduate with B.Ed</option>
+          <option value="TET Qualified with D.El.Ed/B.Ed">TET Qualified with D.El.Ed/B.Ed</option>
+          <option value="MBBS/Pharmacy/12th">MBBS/Pharmacy/12th</option>
+          <option value="MBBS/BDS/Nursing/Pharmacy">MBBS/BDS/Nursing/Pharmacy/option>
+          <option value="B.Tech/M.Tech">B.Tech/M.Tech</option>
+          <option value="Master's Degree">Master's Degree</option>
+          <option value="M.Sc in Life Sciences or related field">M.Sc in Life Sciences or related field</option>
+          <option value="Graduate in any language">Graduate in any language</option>
+          <option value="B.Tech/MCA">B.Tech/MCA</option>
+          <option value="B.Tech in Telecommunications or related field">B.Tech in Telecommunications or related field</option>
+          <option value="Graduate/Post-Graduate in Archaeology or related field">Graduate/Post-Graduate in Archaeology or related field</option>
+          <option value="Graduate in Tourism or related field">Graduate in Tourism or related field</option>
+          <option value="Depends on the job">Depends on the job</option>
+          <option value="Varies by role">Varies by role</option>
+          <option value="Graduate in Forestry/Biology">Graduate in Forestry/Biology</option>
+          <option value="Graduate in Forestry or related field">Graduate in Forestry or related field</option>
+          <option value="Graduate in Biology/Wildlife Science">Graduate in Biology/Wildlife Science</option>
+          <option value="Post-Graduate in History">Post-Graduate in History</option>
+          <option value="Post-Graduate in Science/Engineering">Post-Graduate in Science/Engineering</option>
+          <option value="Varies">Varies</option>
+          <option value="Post-Graduate in Astrophysics/Physics">Post-Graduate in Astrophysics/Physics</option>
+  <option value="Other">Other</option>
+        </select>
+
+        <label for="category">Category:</label>
+        <select id="category" required>
+          <option value="General">General</option>
+          <option value="OBC">OBC</option>
+          <option value="SC">SC</option>
+          <option value="ST">ST</option>
+        </select>
+
+        <button type="button" onclick="checkEligibility()">Check Eligibility</button>
+      </form>
+      <div id="eligibilityResult"></div>
+    </section>
+
+    <!-- Exam Details Section -->
+    <section id="exam-details">
+      <h2>Exam Details</h2>
+      <div id="examInfo"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Designed to simplify government exam preparation. Stay updated and succeed!</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
